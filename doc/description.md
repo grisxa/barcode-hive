@@ -13,6 +13,9 @@
 ### Контрольный пункт
 Сопровождается одномерным штрихкодом (из чёрных и белых полосок) или двумерным QR-кодом. В формате QR доступна сопутствующая информация из описания [vCard](https://ru.wikipedia.org/wiki/VCard). Например,
 
+![QR Старт](test-start-qr.png "QR Старт")
+
+    BEGIN:VCARD
     VERSION:4.0
     URL:https://baltic-star-cloud.web.app/brevet/jurvMkU0gmw1Ak29fwVj/checkpoint/nPgAHOJkBEe1XdlPrkkR
     X-TYPE:checkpoint
@@ -23,5 +26,34 @@
 
 В поле **NOTE** указана цифровая подпись идентификатора, с помощью которой сервер проверяет достоверность входящих сообщений. Подпись и содержащее его QR-изображение доступно только администраторам. Остальные видят только штрихкод.
 
+<img src="test-start-bar.svg" alt="Штрихкод Старт" title="Штрихкод Старт" width="300px">
+
 ### Участник
 QR-код с подписью доступен только владельцу аккаунта и администраторам. . Остальные видят только штрихкод.
+
+![Иван Петров](test-petrov-qr.png "Иван Петров")
+
+    BEGIN:VCARD
+    VERSION:4.0
+    URL:https://baltic-star-cloud.web.app/rider/JcXMTycJAHXRaafqWQgW
+    FN:Иван Петров
+    TEL;PREF:+79211234567
+    N:Петров;Иван
+    X-TYPE:rider
+    UID:JcXMTycJAHXRaafqWQgW
+    NOTE:aefde262df9dbd840838d82eed390a5ca6e5e7d9b3749f723a40fa65aa902f6a
+    END:VCARD
+
+<img src="test-petrov-bar.svg" alt="Иван Петров" title="Иван Петров" width="300px">
+
+Можно сократить количество полей, чтобы уменьшить размер изображения и улучшить читаемость, но тогда его нельзя будет импортировать в контакты.
+
+![Иван Петров краткий вариант](test-petrov-qr-short.png "Иван Петров краткий вариант")
+
+    BEGIN:VCARD
+    VERSION:4.0
+    FN:Иван Петров
+    X-TYPE:rider
+    UID:JcXMTycJAHXRaafqWQgW
+    NOTE:aefde262df9dbd840838d82eed390a5ca6e5e7d9b3749f723a40fa65aa902f6a
+    END:VCARD
